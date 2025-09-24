@@ -64,9 +64,7 @@ console.log(pattern.test(str)); // true
   console.log(regex.test(str)); // true (Waxa la helay wixii la raadinayey)
   ```
   
-  ```md
   **"Adam"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
-   ``` 
     
   ```js
   let str = "Adam 123 Adam 456 Adam";
@@ -74,6 +72,5 @@ console.log(pattern.test(str)); // true
   console.log(regex.test(str)); // false (Lama helin wixii la raadinayey)
   ```
   
-  ```md
   **"Ahmed"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
-  ```
+
