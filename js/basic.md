@@ -40,7 +40,7 @@ let regex = new RegExp(pattern);
 ## Methods la adeegsado marka la isticmaalayo **Regular Expression**
 Si methods u isticmaalno waxaan u baahanahay laba waxyaabo:
 1. **Pattern**: Inaynu qeexno waxa la raadinayo.
-2. **String** Qoraalka laga dhex raadinayo.
+2. **String**: Qoraalka laga dhex raadinayo.
 
 **Tusaale**:
 ```js
