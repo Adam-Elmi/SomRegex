@@ -63,11 +63,11 @@ console.log(pattern.test(str)); // true
   let regex = /Adam/;
   console.log(regex.test(str)); // true (Waxa la helay wixii la raadinayey)
   ```
-     "Adam" → ayaa laga dhex raadiyey qoraalka ah "Adam 123 Adam 456 Adam"
+     **"Adam"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
     
   ```js
   let str = "Adam 123 Adam 456 Adam";
   let regex = /Ahmed/;
   console.log(regex.test(str)); // false (Lama helin wixii la raadinayey)
   ```
-     "Ahmed" → ayaa laga dhex raadiyey qoraalka ah "Adam 123 Adam 456 Adam"
+     **"Ahmed"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
