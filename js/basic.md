@@ -55,102 +55,142 @@ console.log(pattern.test(str)); // true
 
 #### Methods u gaarka ah Regex (Regex Methods)
 1. **Test Method**:
-  - Method-kan marwalba laba mid uun bu so celinaya, **true** ama **false**.
-  - Haddii la helo waxa la raadinayo, wuxu so celinaya **true**, haddii kalena **false*.
-  **Tusaale:**
+    - Method-kan marwalba laba mid uun bu so celinaya, **true** ama **false**.
+    - Haddii la helo waxa la raadinayo, wuxu so celinaya **true**, haddii kalena **false*.
+    **Tusaale:**
+    ```js
+    let str = "Adam 123 Adam 456 Adam";
+    let regex = /Adam/;
+    console.log(regex.test(str)); // true (Waxa la helay wixii la raadinayey)
+    ```
+    
+    **"Adam"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
+      
+    ```js
+    let str = "Adam 123 Adam 456 Adam";
+    let regex = /Ahmed/;
+    console.log(regex.test(str)); // false (Lama helin wixii la raadinayey)
+    ```
+    
+    **"Ahmed"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
+    
+  **Global Flag**:
+  - Waxa jira wax loo yaqaano **flags**, wa xuruufo shaqo gaar ah ino qabanaya. Qaabkan ayaa loo qeexa **flags**:
+  `/pattern/flag`
+  ```js 
+  let pattern = /Adam/g;
+  ```
+  
+  - Xuruufahaas waxa mid ah xarafka **"g"** oo micnihiisu yahay **global**.
+  - **"g"** shaqada u qabanayo waxa weeye in u raadiyo dhamaan qoraalada match gareeyey **pattern**. Tusaale:
+  
+  
+  > [!IMPORTANT]
+  > Marka adeegsan **global flag (g)** wuxu wax ka bedelaya hab dhaqanka method-ka **test**.
+  
+  #### Hab-Dhaqanka Test Method haddii la adeegsan global flag (g)
+  Haddii la adeegsan global flag (g), method-ka **test** ma yeelanayo wax xasuus ah oo marwalba qoraalka oo  dhameystiran ayaa wax ka dhex raadinaya. **Tusaale**:
   ```js
   let str = "Adam 123 Adam 456 Adam";
   let regex = /Adam/;
-  console.log(regex.test(str)); // true (Waxa la helay wixii la raadinayey)
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // true
   ```
+  `console.log(regex.test(str));` → marwalba waa **true**
   
-  **"Adam"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
-    
+  #### Hab-Dhaqanka Test Method haddii la adeegsado global flag (g)
+  Haddii la adeegsado global flag (g), method-ka **test** wuxu yeelanaya xasuus ah oo marwalba raadinta wuxu kasi wadaya meeshi ugu dambeysay. **Tusaale**:
   ```js
   let str = "Adam 123 Adam 456 Adam";
-  let regex = /Ahmed/;
-  console.log(regex.test(str)); // false (Lama helin wixii la raadinayey)
+  let regex = /Adam/g;
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // true
+  console.log(regex.test(str)); // false
+  ```
+  **Sidan ayuu u dhaqmaya**:
+  
+  Qoraalka la raadinayo: **"Adam"** 
+  
+  Qoraalka laga dhex raadinayo: **"Adam 123 Adam 456 Adam"**
+  
+  Method-ka **test** wuxu xasuusanaya meeshii/position u dambeyey 
+  
+  ```md
+    **String**     "Adam 123 Adam 456 Adam"
+    **Position**      0   1    2   3    4
   ```
   
-  **"Ahmed"** → ayaa laga dhex raadiyey qoraalka ah **"Adam 123 Adam 456 Adam"**
   
-#### Global Flag
-- Waxa jira wax loo yaqaano **flags**, wa xuruufo shaqo gaar ah ino qabanaya. Qaabkan ayaa loo qeexa **flags**:
-`/pattern/flag`
-```js 
-let pattern = /Adam/g;
-```
-
-- Xuruufahaas waxa mid ah xarafka **"g"** oo micnihiisu yahay **global**.
-- **"g"** shaqada u qabanayo waxa weeye in u raadiyo dhamaan qoraalada match gareeyey **pattern**. Tusaale:
-
-
-> [!IMPORTANT]
-> Marka adeegsan **global flag (g)** wuxu wax ka bedelaya hab dhaqanka method-ka **test**.
-
-#### Hab-Dhaqanka Test Method haddii la adeegsan global flag (g)
-Haddii la adeegsan global flag (g), method-ka **test** ma yeelanayo wax xasuus ah oo marwalba qoraalka oo  dhameystiran ayaa wax ka dhex raadinaya. **Tusaale**:
-```js
-let str = "Adam 123 Adam 456 Adam";
-let regex = /Adam/;
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // true
-```
-`console.log(regex.test(str));` → marwalba waa **true**
-
-#### Hab-Dhaqanka Test Method haddii la adeegsado global flag (g)
-Haddii la adeegsado global flag (g), method-ka **test** wuxu yeelanaya xasuus ah oo marwalba raadinta wuxu kasi wadaya meeshi ugu dambeysay. **Tusaale**:
-```js
-let str = "Adam 123 Adam 456 Adam";
-let regex = /Adam/g;
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // true
-console.log(regex.test(str)); // false
-```
-**Sidan ayuu u dhaqmaya**:
-
-Qoraalka la raadinayo: **"Adam"** 
-
-Qoraalka laga dhex raadinayo: **"Adam 123 Adam 456 Adam"**
-
-Method-ka **test** wuxu xasuusanaya meeshii/position u dambeyey 
-
-```md
-  String     "Adam 123 Adam 456 Adam"
-  Position      0   1    2   3    4
-```
-
-
-1. **"Adam"** waxa laga helay qoraalka **"Adam 123 Adam 456 Adam"**
-
-```js
-let str = "Adam 123 Adam 456 Adam";
-let regex = /Adam/g;
-console.log(regex.test(str)); // true
-```
-`Position: 0`
-
-2. **"Adam"** waxa laga helay qoraalka **"123 Adam 456 Adam"**
-
-```js
-console.log(regex.test(str)); // true
-```
-
-`Position: 2`
-
-3. **"Adam"** waxa laga helay qoraalka **"456 Adam"**
-
-```js
-console.log(regex.test(str)); // true
-```
-
-`Position: 4`
-
-4. **"Adam"** lagama helin qoraalka **""**
-
-```js
-console.log(regex.test(str)); // false
-```
+  1. **"Adam"** waxa laga helay qoraalka **"Adam 123 Adam 456 Adam"**
+  
+  ```js
+  let str = "Adam 123 Adam 456 Adam";
+  let regex = /Adam/g;
+  console.log(regex.test(str)); // true
+  ```
+  `Position: 0`
+  
+  2. **"Adam"** waxa laga helay qoraalka **"123 Adam 456 Adam"**
+  
+  ```js
+  console.log(regex.test(str)); // true
+  ```
+  
+  `Position: 2`
+  
+  3. **"Adam"** waxa laga helay qoraalka **"456 Adam"**
+  
+  ```js
+  console.log(regex.test(str)); // true
+  ```
+  
+  `Position: 4`
+  
+  4. **"Adam"** lagama helin qoraalka **""**
+  
+  ```js
+  console.log(regex.test(str)); // false
+  ```
+  
+2. **Exec Method**:
+  - Haddi la helo qoraalka la raadinayo method-kan wuxu so celinaya **array**, haddi la helina wuxu so celinaya **null**.
+  ```js
+  let str = "Adam 123 Adam 456 Adam";
+  let regex = /Adam/;
+  console.log(regex.exec(str)); 
+  // ['Adam', index: 0, input: 'Adam 123 Adam 456 Adam', groups: undefined]
+  ```
+  - **'Adam'** → qoraalka match gareeyey qoraalka la raadinayey
+  - **index** → position laga helay
+  - **input** → qoraalka laga dhex raadinayey
+  
+  Haddi aynu adeegsano **global flag (g)** hab-dhaqanka method-kan **exec** wu is-bedelaya, **test method** ayey isku mid noqonayaan.
+  
+#### Methods u gaarka ah String (String Methods)
+1. **Match Method**:
+  - Haddi la helo qoraalka la raadinayo method-kan wuxu so celinaya **array**, haddi la helina wuxu so celinaya **null**.
+  ```js
+  let str = "Adam 123 Adam 456 Adam";
+  let regex = /Adam/;
+  console.log(str.match(regex)); 
+  // ['Adam', index: 0, input: 'Adam 123 Adam 456 Adam', groups: undefined]
+  ```
+  - **'Adam'** → qoraalka match gareeyey qoraalka la raadinayey
+  - **index** → position laga helay
+  - **input** → qoraalka laga dhex raadinayey
+  
+  Method-ka **match** iyo method-ka **exec** si isku mid ah ayey u shaqeyaan waa haddii la adeegsan **global flag (g)**. Haddii la adeegsado **global flag**, hab-dhaqanka method-ka **match** wu is bedelaya, natiijada laso celinayo ayaa is bedelaysa, tusaale ahaan:
+  
+  ```js
+  let str = "Adam 123 Adam 456 Adam";
+  let regex = /Adam/g;
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  console.log(str.match(regex)); // [ 'Adam', 'Adam', 'Adam' ]
+  ```
