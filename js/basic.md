@@ -131,7 +131,7 @@ let str = "Adam 123 Adam 456 Adam";
 let regex = /Adam/g;
 console.log(regex.test(str)); // true
 ```
-Position: **0**
+`Position: 0`
 
 2. **"Adam"** waxa laga helay qoraalka **"123 Adam 456 Adam"**
 
@@ -139,7 +139,7 @@ Position: **0**
 console.log(regex.test(str)); // true
 ```
 
-Position: **2**
+`Position: 2`
 
 3. **"Adam"** waxa laga helay qoraalka **"456 Adam"**
 
@@ -147,7 +147,7 @@ Position: **2**
 console.log(regex.test(str)); // true
 ```
 
-Position: **4**
+`Position: 4`
 
 4. **"Adam"** lagama helin qoraalka **""**
 
