@@ -2,8 +2,10 @@
 
 ## Regular Expression
 
-- **Regular Expression** waa qoraal khaas ah oo u sheegaya computer-ka waxa uu ka raadinayo qoraal kale (sida tiro, eray, calaamad, iwm).
+- **Regular Expression** waa qoraal la qeexayo kaas inaga caawinaya raadinta qoraal kale.
 
-- **Regex** oo ah  **Regular Expression** oo qoraal ahaan laso gaabiyey.
+- Qoraalkaas la qeexayo wuxu noqon kara xuruufo micno gaar ah u taagan oo go'aaminaya qaabka raadinta.
 
-- **Pattern** → Qaabka raadinta
+- **Regular Expression** waxa loo so gaabiya **Regex** ama **Regexp**.
+
+- **Pattern** → Qeexida waxa la raadinayo. Waxa la qeexaya qoraalka la raadinayo.
