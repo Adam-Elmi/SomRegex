@@ -34,6 +34,8 @@ Mark aad rabtid inaad isticmaashid **Javascript Regular Expression**, waxa jira 
 > Habka wuxu ino saamaxaya inaynu ***variables*** adeegsan karno, tusaale:
 ```js
 let pattern = "hello";
+// ama 
+// let pattern = /hello/;
 let regex = new RegExp(pattern);
 ```
 
