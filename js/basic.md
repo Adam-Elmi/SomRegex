@@ -45,8 +45,8 @@ Si methods u isticmaalno waxaan u baahanahay laba waxyaabo:
 **Tusaale**:
 ```js
 let str = "Hello World";
-let regex = /Hello/;
-console.log(regex.test(str)); // true
+let pattern = /Hello/;
+console.log(pattern.test(str)); // true
 ```
 > [!NOTE]
 > Waxa jira methods u gaar ah **Regular Expression** iyo methods u gaar ah **String**
