@@ -82,7 +82,7 @@ console.log(pattern.test(str)); // true
   ```
   
   - Xuruufahaas waxa mid ah xarafka **"g"** oo micnihiisu yahay **global**.
-  - **"g"** shaqada u qabanayo waxa weeye in u raadiyo dhamaan qoraalada match gareeyey **pattern**. Tusaale:
+  - **"g"** shaqada u qabanayo waxa weeye in u raadiyo dhamaan qoraalada match gareeyey **pattern**.
   
   
   > [!IMPORTANT]
