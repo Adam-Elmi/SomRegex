@@ -1,7 +1,8 @@
 /* 
 1. Test Method:
 - Method-kan marwalba laba mid uun bu so celinaya, true ama false.
-- Haddii la helo waxa la raadinayo, wuxu so celinaya true, haddii kalena false*.Tusaale:
+- Haddii la helo waxa la raadinayo, wuxu so celinaya true, haddii kalena false.
+Tusaale:
 */
 
 let str = "Adam 123 Adam 456 Adam";
